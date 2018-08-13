@@ -1,7 +1,7 @@
 
 
 class Grid:
-    """ A square grid of width * height dimensions """
+    """ A grid of width * height dimensions """
 
     def __init__(self, w = 5, h = 5):
         """ Grid can be initialized with passed in width and height,

@@ -4,6 +4,9 @@ from housingGrid import Grid
 from driver import Driver
 from house import House
 
+lengthError = "error: not enough points passed in for grid and or houses, should be at least 4 digits"
+oddError = "error: odd number of total x and y values for grid and or houses, should be even"
+
 def initializePizzaBot(gridSize, houses):
     """
     Creates grid and creates driver, returns driver
@@ -25,13 +28,19 @@ def initializePizzaBot(gridSize, houses):
 def main(args):
     args = [int(s) for s in re.split('x| \(|, |\)', args) if s.isdigit()]
 
-    gridSize = [args[0], args[1]]
-    houses = args[2:]
+    if len(args) >= 4 and len(args) % 2 == 0:
+        gridSize = [args[0], args[1]]
+        houses = args[2:]
 
-    driver = initializePizzaBot(gridSize, houses)
+        driver = initializePizzaBot(gridSize, houses)
 
-    driver.deliver()
-    return(driver.actionList)
+        driver.deliver()
+        return(driver.actionList)
+    else:
+        if len(args) < 4:
+            return lengthError
+        elif len(args) % 2 != 0:
+            return oddError
 
 if __name__ == "__main__":
 

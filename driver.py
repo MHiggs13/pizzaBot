@@ -64,14 +64,16 @@ class Driver:
     def move(self):
         if self.p.y == self.grid.height:
             if self.goNorth:
-                self.goNorth = False
-                self.moveEast()
+                if self.p.x < self.grid.width:
+                    self.goNorth = False
+                    self.moveEast()
             else:
                 self.moveSouth()
         elif self.p.y == 0:
             if not self.goNorth:
-                self.goNorth = True
-                self.moveEast()
+                if self.p.x < self.grid.width:
+                    self.goNorth = True
+                    self.moveEast()
             else:
                 self.moveNorth()
         else:

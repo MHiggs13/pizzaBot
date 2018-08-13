@@ -29,5 +29,8 @@ class House:
         else:
             return self.p.x < other.p.x
 
+    def __eq__(self, other):
+        return self.p == other.p and self.isDelivered == other.isDelivered
+
     def __str__(self):
         return "Point: {0}\t,isDelivered: {1}".format(str(self.p), self.isDelivered)
