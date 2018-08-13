@@ -16,6 +16,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 You need Python 3 to run pizzaBot. 
 On Ubuntu Python 3 can be installed by calling:
+
 ```$ sudo apt-get install python3 python3-pip```
 
 ### Running
