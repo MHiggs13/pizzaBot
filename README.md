@@ -1,4 +1,4 @@
-# Michael Higgins PizzaBot for Slice
+# PizzaBot for Slice
 
 Pizzabot delivers pizzas in a neighborhood. Given a grid of houses (each point on the grid is a house) and a list of houses within the grid to deliver to, pizza bot will travel to each house that requires a delivery and "deliver" a pizza.
 Pizzabot can be given one of the following instructions,
